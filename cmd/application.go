@@ -169,7 +169,7 @@ func (app *application) healthcheckHandler(w http.ResponseWriter, r *http.Reques
 
 	metrics.CountResponse(http.StatusOK, endpoint)
 	app.writeJSON(w, http.StatusOK, envelope{
-		"status": "avaiable",
+		"status": "available",
 	}, nil)
 
 	metrics.Latency([]string{endpoint}, time.Since(start))
